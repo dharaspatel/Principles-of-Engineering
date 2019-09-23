@@ -1,0 +1,253 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:Arduino_UNO_R3 A?
+U 1 1 5D757544
+P 6500 4300
+F 0 "A?" H 6500 5478 50  0001 C CNN
+F 1 "Arduino_UNO_R3" V 6500 5386 50  0001 C CNN
+F 2 "Module:Arduino_UNO_R3" H 6650 3250 50  0001 L CNN
+F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 6300 5350 50  0001 C CNN
+	1    6500 4300
+	1    0    0    -1  
+$EndComp
+NoConn ~ 7000 4400
+NoConn ~ 7000 4500
+NoConn ~ 7000 4600
+NoConn ~ 7000 4700
+NoConn ~ 7000 4800
+NoConn ~ 7000 5000
+NoConn ~ 7000 5100
+NoConn ~ 7000 3700
+NoConn ~ 6600 3300
+NoConn ~ 6400 3300
+NoConn ~ 6000 3700
+NoConn ~ 6000 3800
+NoConn ~ 6000 3900
+NoConn ~ 6000 4000
+NoConn ~ 6000 4100
+NoConn ~ 6000 4200
+NoConn ~ 6000 4300
+NoConn ~ 6000 4400
+NoConn ~ 6000 4500
+NoConn ~ 6000 4900
+NoConn ~ 6000 5000
+$Comp
+L power:+5V #PWR?
+U 1 1 5D75765A
+P 6700 3300
+F 0 "#PWR?" H 6700 3150 50  0001 C CNN
+F 1 "+5V" H 6715 3473 50  0000 C CNN
+F 2 "" H 6700 3300 50  0001 C CNN
+F 3 "" H 6700 3300 50  0001 C CNN
+	1    6700 3300
+	1    0    0    -1  
+$EndComp
+NoConn ~ 7000 3900
+NoConn ~ 7000 4100
+$Comp
+L Device:LED D?
+U 1 1 5D7576BF
+P 5250 4600
+F 0 "D?" H 5241 4725 50  0001 C CNN
+F 1 "LED" H 5241 4725 50  0001 C CNN
+F 2 "" H 5250 4600 50  0001 C CNN
+F 3 "~" H 5250 4600 50  0001 C CNN
+	1    5250 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5D757763
+P 5250 4750
+F 0 "D?" H 5241 4966 50  0001 C CNN
+F 1 "LED" H 5241 4875 50  0001 C CNN
+F 2 "" H 5250 4750 50  0001 C CNN
+F 3 "~" H 5250 4750 50  0001 C CNN
+	1    5250 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5D757804
+P 5250 4900
+F 0 "D?" H 5241 5116 50  0001 C CNN
+F 1 "LED" H 5241 5025 50  0001 C CNN
+F 2 "" H 5250 4900 50  0001 C CNN
+F 3 "~" H 5250 4900 50  0001 C CNN
+	1    5250 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 4600 5400 4600
+$Comp
+L Device:R_Small R?
+U 1 1 5D7578FB
+P 4800 5150
+F 0 "R?" H 4859 5196 50  0001 L CNN
+F 1 "R_Small" H 4859 5150 50  0001 L CNN
+F 2 "" H 4800 5150 50  0001 C CNN
+F 3 "~" H 4800 5150 50  0001 C CNN
+	1    4800 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5D757979
+P 4900 5150
+F 0 "R?" H 4959 5196 50  0001 L CNN
+F 1 "R_Small" H 4959 5150 50  0001 L CNN
+F 2 "" H 4900 5150 50  0001 C CNN
+F 3 "~" H 4900 5150 50  0001 C CNN
+	1    4900 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5D757984
+P 5000 5150
+F 0 "R?" H 5059 5196 50  0001 L CNN
+F 1 "R_Small" H 5059 5150 50  0001 L CNN
+F 2 "" H 5000 5150 50  0001 C CNN
+F 3 "~" H 5000 5150 50  0001 C CNN
+	1    5000 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 4600 4800 4600
+Wire Wire Line
+	4800 4600 4800 5050
+Wire Wire Line
+	5100 4750 4900 4750
+Wire Wire Line
+	4900 4750 4900 5050
+Wire Wire Line
+	5100 4900 5000 4900
+Wire Wire Line
+	5000 4900 5000 5050
+$Comp
+L power:GND #PWR?
+U 1 1 5D757BF3
+P 4800 5250
+F 0 "#PWR?" H 4800 5000 50  0001 C CNN
+F 1 "GND" H 4805 5077 50  0001 C CNN
+F 2 "" H 4800 5250 50  0001 C CNN
+F 3 "" H 4800 5250 50  0001 C CNN
+	1    4800 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D757C05
+P 4900 5250
+F 0 "#PWR?" H 4900 5000 50  0001 C CNN
+F 1 "GND" H 4905 5077 50  0000 C CNN
+F 2 "" H 4900 5250 50  0001 C CNN
+F 3 "" H 4900 5250 50  0001 C CNN
+	1    4900 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D757C10
+P 5000 5250
+F 0 "#PWR?" H 5000 5000 50  0001 C CNN
+F 1 "GND" H 5005 5077 50  0001 C CNN
+F 2 "" H 5000 5250 50  0001 C CNN
+F 3 "" H 5000 5250 50  0001 C CNN
+	1    5000 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D757C2B
+P 6500 5500
+F 0 "#PWR?" H 6500 5250 50  0001 C CNN
+F 1 "GND" H 6505 5327 50  0000 C CNN
+F 2 "" H 6500 5500 50  0001 C CNN
+F 3 "" H 6500 5500 50  0001 C CNN
+	1    6500 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 5400 6500 5400
+Connection ~ 6500 5400
+Wire Wire Line
+	6500 5400 6600 5400
+Wire Wire Line
+	6500 5400 6500 5500
+Wire Wire Line
+	5400 4900 5950 4900
+Wire Wire Line
+	5950 4900 5950 4800
+Wire Wire Line
+	5950 4800 6000 4800
+Wire Wire Line
+	5400 4750 5950 4750
+Wire Wire Line
+	5950 4750 5950 4700
+Wire Wire Line
+	5950 4700 6000 4700
+Text Notes 5350 4600 0    50   ~ 0
+LED 1
+Text Notes 5350 4750 0    50   ~ 0
+LED 2\n
+Text Notes 5350 4900 0    50   ~ 0
+LED 3\n
+Wire Wire Line
+	7000 4300 7350 4300
+$Comp
+L formula:AnalogDistanceSensor U?
+U 1 1 5D75A859
+P 7700 4300
+F 0 "U?" V 8165 4300 50  0001 C CNN
+F 1 "AnalogDistanceSensor" V 8073 4300 50  0001 C CNN
+F 2 "" H 7700 4300 50  0001 C CNN
+F 3 "" H 7700 4300 50  0001 C CNN
+	1    7700 4300
+	0    -1   -1   0   
+$EndComp
+Text Notes 7250 3900 0    50   ~ 0
+Infared Distance Sensor
+$Comp
+L power:GND #PWR?
+U 1 1 5D75B76F
+P 8150 4450
+F 0 "#PWR?" H 8150 4200 50  0001 C CNN
+F 1 "GND" H 8155 4277 50  0000 C CNN
+F 2 "" H 8150 4450 50  0001 C CNN
+F 3 "" H 8150 4450 50  0001 C CNN
+	1    8150 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5D75B798
+P 8150 4150
+F 0 "#PWR?" H 8150 4000 50  0001 C CNN
+F 1 "+5V" H 8165 4323 50  0000 C CNN
+F 2 "" H 8150 4150 50  0001 C CNN
+F 3 "" H 8150 4150 50  0001 C CNN
+	1    8150 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 4150 8150 4150
+Wire Wire Line
+	8050 4450 8150 4450
+Text Notes 6050 3500 2    50   ~ 0
+Arduino Uno R3
+$EndSCHEMATC
