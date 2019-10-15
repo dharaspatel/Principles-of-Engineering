@@ -126,14 +126,12 @@ Text Notes 4050 3050 0    50   Italic 0
 Collector
 Text Notes 4050 3350 0    50   Italic 0
 Emitter
-Text Notes 3700 2750 0    50   ~ 0
-10 K
+Text Notes 4050 2750 0    50   ~ 0
+R_sense
 Text Notes 3100 2750 0    50   ~ 0
 200
-Text Notes 1250 2200 0    50   ~ 10
-LEFT IR SENSOR
-Text Notes 3450 2200 0    50   ~ 10
-RIGHT IR SENSOR
+Text Notes 3550 2200 0    50   ~ 10
+IR SENSOR
 $Comp
 L LED:IR204A D?
 U 1 1 5DA0B153

@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Lab3_sch-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -121,7 +122,7 @@ Wire Notes Line
 Wire Notes Line
 	650  2300 650  3600
 Text Label 4300 2900 0    50   ~ 0
-V_right
+V_out
 Text Notes 4050 3050 0    50   Italic 0
 Collector
 Text Notes 4050 3350 0    50   Italic 0
@@ -241,4 +242,17 @@ Text Notes 2950 3100 0    39   Italic 0
 light emitted
 Text Notes 3400 2950 0    39   Italic 0
 light detected
+$Comp
+L power:+5V #PWR?
+U 1 1 5DA22F4D
+P 3850 2650
+F 0 "#PWR?" H 3850 2500 50  0001 C CNN
+F 1 "+5V" H 4000 2700 50  0001 C CNN
+F 2 "" H 3850 2650 50  0001 C CNN
+F 3 "" H 3850 2650 50  0001 C CNN
+	1    3850 2650
+	-1   0    0    1   
+$EndComp
+Text Notes 3750 2700 0    50   ~ 0
+Ic
 $EndSCHEMATC
