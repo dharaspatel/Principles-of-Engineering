@@ -12,42 +12,30 @@ int dataLeft; //left sensor output
 Adafruit_MotorShield AFMS = Adafruit_MotorShield(); 
 Adafruit_DCMotor *motorLeft = AFMS.getMotor(1); //M1
 Adafruit_DCMotor *motorRight = AFMS.getMotor(2); //M2
-double speeds[] = {30,30};
+double speeds[] = {20,20}; //initial {left , right}
 
 //PID control
-//double dState; //last sensor input (difference between left and right)
-//double iState; //integrator state 
-//double iMax, iMin; //max and min integrator state 
 double pGain = 0.02;
-//double iGain = 10;
-//double dGain = 10; //gains 
 double correction;
-int cutoff = 50;
 
 void setup() {
   Serial.begin(9600); //serial monitor
   AFMS.begin();  // create with the default frequency 1.6KHz
-  motorLeft->setSpeed(speeds[0]);
+  
+  motorLeft->setSpeed(speeds[0]); //initialize motors
   motorRight->setSpeed(speeds[1]);
 }
 
 void loop() {
+  
   //read sensors
   dataRight = analogRead(sensorRight);
   dataLeft = analogRead(sensorLeft);
 
-//  Serial.print("Right: ");
-//  Serial.println(dataRight);
-//  Serial.print("Left: ");
-//  Serial.println(dataLeft);
-//  Serial.print("Difference: ");
-//  Serial.println(dataRight-dataLeft);
-
-  //correct using PID
+  //calculate correction using P-only control
   correction = updatePID(dataRight-dataLeft);
-//  Serial.print("Correction: ");
-//  Serial.println(correction);
-  
+
+  //alter speed accordingly 
   if (correction > 0){
     speeds[0] = 20 + correction; //left wheel speed should be greater when positive
     speeds[1] = 20 - correction;
@@ -56,8 +44,6 @@ void loop() {
     speeds[1] = 20 - correction; //right wheel should be greater when negative 
   }
 
-  //delay(200);
-
   //set new speeds
   motorLeft->setSpeed(speeds[0]);
   motorRight->setSpeed(speeds[1]);
@@ -65,6 +51,7 @@ void loop() {
   motorRight->run(FORWARD);
 
 
+  //Data collection
   //Left sensor, Left speed, Right sensor, right speed
   Serial.print(dataLeft);
   Serial.print(",");
@@ -76,29 +63,16 @@ void loop() {
 }
 
 double updatePID(double error){
-  
+
+  //amplifying error 
   double pTerm, dTerm, iTerm;
   if(abs(error) < 100){
-    error -= 20;
+    error -= 30;
   }
   if(abs(error) > 300){
     error += 70;
   }
 
   pTerm = pGain*error;
-
-//  iState += error;
-//  if(iState > iMax){
-//    iState = iMax;
-//  }
-//  if(iState < iMin){
-//    iState = iMin;
-//  }
-//
-//  iTerm = iGain*iState
-//
-//  dTerm = dGain*(dState - pos);
-//  dState = pos;
-//  
   return pTerm;
 }
